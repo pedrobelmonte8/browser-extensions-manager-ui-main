@@ -1,0 +1,20 @@
+/* Neutral */
+:root {
+  --Neutral-900: #09153e;
+  --Neutral-800: #212636;
+  --Neutral-700: #2f364b;
+  --Neutral-600: #545969;
+  --Neutral-300: #c7c7c7;
+  --Neutral-200: #d6e2f5;
+  --Neutral-100: #ededed;
+  --Neutral-0: #fbfdfe;
+
+  /* Red */
+  --Red-400: #f25c54;
+  --Red-500: #de473f;
+  --Red-700: #c7221a;
+
+  /* Gradient */
+  --Light-Gradient: linear-gradient(180deg, #ebf2fc 0%, #eef8f9 100%);
+  --Dark-Gradient: linear-gradient(180deg, #040918 0%, #091540 100%);
+}
