@@ -2,10 +2,15 @@ export function cardComponent({ name, description, logo, isActive }) {
   // Create a card element with the provided properties
   const card = document.createElement("div");
   card.className = "card";
+
   const cardHeader = document.createElement("div");
   cardHeader.className = "card-header";
+  const cardHeaderText = document.createElement("div");
+  cardHeaderText.className = "card-header-text";
+
   const cardFotter = document.createElement("div");
   cardFotter.className = "card-footer";
+
   card.appendChild(cardHeader);
   card.appendChild(cardFotter);
 
@@ -35,23 +40,23 @@ export function cardComponent({ name, description, logo, isActive }) {
   label.appendChild(span);
 
   //Button remove
-    const button = document.createElement("button");
-    button.className = "btn-remove";
-    button.textContent = "Remove";
-    button.addEventListener("click", () => {
-      card.remove();
-    });
-    
+  const button = document.createElement("button");
+  button.className = "btn-remove";
+  button.textContent = "Remove";
+  button.addEventListener("click", () => {
+    card.remove();
+  });
 
   // Append the elements to the card
   cardHeader.appendChild(img);
-  cardHeader.appendChild(h2);
-  cardHeader.appendChild(p);
+  cardHeaderText.appendChild(h2);
+  cardHeaderText.appendChild(p);
+  cardHeader.appendChild(cardHeaderText);
+
+
 
   cardFotter.appendChild(button);
   cardFotter.appendChild(label);
-  
-
 
   return card;
 }

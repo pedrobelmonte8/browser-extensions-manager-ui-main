@@ -1,7 +1,6 @@
 import { cardComponent } from "./components/cardComponent.js";
 
-const app = document.getElementById("app");
-console.log(app);
+const app = document.getElementById("extensionsList");
 
 fetch("./data.json") // también puede ser una URL externa
   .then((res) => res.json())

@@ -1,6 +1,21 @@
 @import './colors.css';
 @import './fonts.css';
 
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+  font-family: 'NotoSans', sans-serif;
+  font-size: 16px;
+  background: var(--Dark-Gradient);
+  color: var(--Neutral-300);
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
 /*Switch styles*/
 
 .switch {
@@ -52,28 +67,17 @@
 
 /*General styles*/
 
-body {
-    font-family: 'NotoSans', sans-serif;
-    background: var(--Dark-Gradient);
-    color: var(--Neutral-0);
-    margin: 0;
-    padding: 20px;
-    box-sizing: border-box;
-}
-.top-container{
+
+.topbar{
   display: flex;
   justify-content: space-between;
   background: var(--Neutral-800);
   padding: 10px 10px;
   border-radius: 10px;
+  margin-bottom: 30px;
 }
 
-.top-container > #titleIcon{
-  
-}
-
-
-.top-container > #themeIcon{
+.topbar > #themeIcon{
 
   background: var(--Neutral-700);
   border-radius: 10px;
@@ -81,46 +85,95 @@ body {
 
 }
 
-.top-container > #themeIcon:hover{
+.topbar > #themeIcon:hover{
   background: var(--Red-400);
   cursor: pointer;
 }
 
-.topbar{
+.topbarStates{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 20px;
 }
 
-.topbar > h1{
+.topbarStates > h1{
   font-size: 25px;
   }
 
-  .topbar > .states{
+  .topbarStates > .states{
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
   }
 
-  .topbar > .states > p{
+  .topbarStates > .states > p{
     background: var(--Neutral-700);
     border-radius: 20px;
     padding: 7px 15px;
     border: solid 1px var(--Neutral-600);
   }
 
-  .topbar > .states > p:hover{
+  .topbarStates > .states > p:hover{
     background: var(--Red-400);
     cursor: pointer;
   }
-  .topbar > .states > p:active{
+  .topbarStates > .states > p:active{
     background: var(--Red-500);
     color: var(--Neutral-900);
   }
 
+  #extensionsList{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
 
+  #extensionsList > .card{
+    background: var(--Neutral-800);
+    border: solid 1px var(--Neutral-600);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+  }
 
+  #extensionsList > .card > .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items:start;
+    gap: 10px;
+  }
+
+  #extensionsList > .card > .card-header > .card-header-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+  }
+  #extensionsList > .card > .card-header > .card-header-text > h2{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--Neutral-100);
+  }
   
+  #extensionsList > .card > .card-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #extensionsList > .card > .card-footer > button{
+    background: var(--Neutral-800);
+    border-radius: 20px;
+    font-weight: 700;
+    padding: 7px 15px;
+    border: solid 1px var(--Neutral-600);
+    color: var(--Neutral-300);
+    cursor: pointer;
+
+  }
 
  
