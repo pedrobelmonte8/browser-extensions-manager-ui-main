@@ -6,25 +6,35 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
-  <title>Frontend Mentor | Browser extensions manager UI</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title>Browser extensions manager UI</title>
+  <link rel="stylesheet" href="./assets/styles/style.css">
 </head>
 <body>
 
-  Extensions List
 
-  All
-  Active
-  Inactive
 
-  <!-- If you plan to use the JSON file to populate the data dynamically, you can delete the content below -->
+  <div class="top-container">
+    <img src="./assets/images/logo.svg" class="search-icon" alt="search">
+    <img id="themeIcon" src="./assets/images/icon-sun.svg" alt="Icono de tema" />
+  </div>
 
-  DevLens
+<div class="topbar">
+    
+  <p>Extension List</p>
+  
+ <div class="states"> 
+  <p>All</p>
+  <p>Active</p>
+  <p>Inactive</p>
+  
+</div>
+  
+</div>
+
+<div id="app"></div>
+
+
+  <!-- DevLens
   Quickly inspect page layouts and visualize element boundaries.
   Remove
 
@@ -70,11 +80,8 @@
 
   ConsolePlus
   Enhanced developer console with advanced filtering and logging.
-  Remove
+  Remove -->
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
+<script type="module" src="./script.js"></script>
 </html>
