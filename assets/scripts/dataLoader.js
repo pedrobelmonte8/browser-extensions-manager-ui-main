@@ -1,4 +1,4 @@
-import { cardComponent } from "./components/cardComponent.js";
+import { cardComponent } from "../components/cardComponent.js";
 
 const app = document.getElementById("extensionsList");
 
@@ -13,4 +13,3 @@ fetch("./data.json") // también puede ser una URL externa
   .catch((err) => {
     console.error("Error al cargar JSON:", err);
   });
-

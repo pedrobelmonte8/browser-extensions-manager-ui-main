@@ -86,6 +86,12 @@ body {
   border: 1px solid var(--Neutral-600);
 }
 
+.topbarStates > .states > button.active {
+  background: var(--Red-500);
+  color: var(--Neutral-800);
+  border: 1px solid transparent;
+}
+
 .topbarStates > .states > button:hover {
   background: var(--Neutral-600);
   color: var(--Neutral-0);
@@ -102,6 +108,8 @@ body {
 .topbarStates > .states > button.selected {
   background: var(--Red-500);
   color: var(--Neutral-800);
+  border: 1px solid transparent;
+
   outline: none;
 }
 
