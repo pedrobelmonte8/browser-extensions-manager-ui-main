@@ -6,15 +6,25 @@
   margin: 0;
   padding: 0;
 }
+
+html, body {
+  min-height: 100%;
+}
+
+html {
+  overflow-y: scroll;
+  background: var(--Dark-Gradient);
+}
+
 body {
   font-family: "NotoSans", sans-serif;
   font-size: 16px;
-  background: var(--Dark-Gradient);
   color: var(--Neutral-300);
   margin: 0;
   padding: 20px;
   box-sizing: border-box;
 }
+
 
 /*General styles*/
 
@@ -97,7 +107,7 @@ body {
   color: var(--Neutral-0);
   cursor: pointer;
 }
-.topbarStates > .states > button:focus {
+.topbarStates > .states > button:focus && button:not(.active) {
   background: var(--Neutral-600);
   color: var(--Neutral-0);
   outline: 2px solid var(--Red-500);
@@ -109,7 +119,6 @@ body {
   background: var(--Red-500);
   color: var(--Neutral-800);
   border: 1px solid transparent;
-
   outline: none;
 }
 
