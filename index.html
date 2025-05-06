@@ -1,40 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Browser extensions manager UI</title>
-  <link rel="stylesheet" href="./assets/styles/style.css">
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
+    <title>Browser extensions manager UI</title>
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+  </head>
+  <body>
+    <div class="topbar">
+      <img src="./assets/images/logo.svg" id="titleIcon" alt="search" />
+      <button><img
+        id="themeIcon"
+        src="./assets/images/icon-sun.svg"
+        alt="Icono de tema"
+      /></button>
+    </div>
 
+    <div class="topbarStates">
+      <h1>Extension List</h1>
+      <div class="states">
+        <button>
+          <p>All</p>
+        </button>
 
-  <div class="topbar">
-    <img src="./assets/images/logo.svg" id="titleIcon" alt="search">
-    <img id="themeIcon" src="./assets/images/icon-sun.svg" alt="Icono de tema" />
-  </div>
+        <button><p>Active</p></button>
+        <button><p>Inactive</p></button>
+      </div>
+    </div>
 
-<div class="topbarStates">
-    
-  <h1>Extension List</h1>
-  
- <div class="states"> 
-  <p>All</p>
-  <p>Active</p>
-  <p>Inactive</p>
-  
-</div>
-  
-</div>
+    <div id="extensionsList"></div>
 
-<div id="extensionsList"></div>
-
-
-  <!-- DevLens
+    <!-- DevLens
   Quickly inspect page layouts and visualize element boundaries.
   Remove
 
@@ -81,7 +86,6 @@
   ConsolePlus
   Enhanced developer console with advanced filtering and logging.
   Remove -->
-
-</body>
-<script type="module" src="./script.js"></script>
+  </body>
+  <script type="module" src="./script.js"></script>
 </html>
