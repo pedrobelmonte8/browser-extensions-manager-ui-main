@@ -1,6 +1,6 @@
 const topbarStatesButtons = document.querySelectorAll(".states > button");
 const extensionsContainer = document.querySelector("#extensionsList");
-let filterValueGlobal = "all";
+let filterValueGlobal = localStorage.getItem("state") || "all"; // Default to "all" if not set
 
 topbarStatesButtons.forEach((button) => {
 
@@ -30,7 +30,7 @@ extensionsContainer.addEventListener("click", (event) => {
   }
 });
 
-const filterItems = (filterValueGlobal) => {
+export const filterItems = (filterValueGlobal) => {
   const cards = document.querySelectorAll(".card");
 
   cards.forEach((card) => {
