@@ -34,6 +34,7 @@ export function cardComponent({ name, description, logo, isActive }) {
   const input = document.createElement("input");
   input.type = "checkbox";
   input.checked = isActive;
+  input.className="checkboxToggle";
   const span = document.createElement("span");
   span.className = "slider";
   label.appendChild(input);
