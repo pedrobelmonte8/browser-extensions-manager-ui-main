@@ -1,44 +1,93 @@
 @import "./colors.css";
 @import "./fonts.css";
 
+:root {
+  /* Colores para la app */
+  --color-bg-app: var(--Dark-Gradient);
+
+  /* Colores para el topbar */
+  --color-bg-topbar: var(--Neutral-800);
+  
+  --color-bg-topbar-btn: var(--Neutral-700);
+  --color-bg-topbar-btn-hover: var(--Neutral-600);
+  --color-outline-topbar-btn: var(--Red-500);
+
+  /* Colores para la barra de estados */
+  --color-text-title: var(--Neutral-100);
+
+  --color-bg-btn: var(--Neutral-700);
+  --color-text-btn: var(--Neutral-100);
+  --color-bg-btn-active: var(--Red-500);
+  --color-text-btn-active: var(--Neutral-800);
+  --color-bg-btn-active-hover: var(--Red-700);
+  --color-border-btn: var(--Neutral-600);
+  --color-bg-btn-hover: var(--Neutral-600);
+  --color-outline-btn-focus: var(--Red-500);
+  --color-bg-btn-focus-not-active: var(--Neutral-600);
+  
+
+  /*Colores para los cards  */
+  --color-bg-card: var(--Neutral-800);
+  --color-border-card: var(--Neutral-600);
+
+  --color-text-card-title: var(--Neutral-100);
+  --color-text-card-desc: var(--Neutral-300);
+
+  --color-bg-card-btn: var(--Neutral-800);
+  --color-text-card-btn: var(--Neutral-300);
+  --color-border-card-btn:var(--Neutral-600);
+  --color-bg-card-btn-hover: var(--Red-700);
+  --color-text-card-btn-hover: var(--Neutral-800);
+  --color-bg-card-btn-focus: var(--Neutral-600);
+  --color-text-card-btn-focus: var(--Neutral-0);
+  --color-outline-card-btn-focus: var(--Red-500);
+
+  /* Colores para el slider */
+  --color-bg-slider-no-checked: var(--Neutral-600);
+  --color-bg-slider-checked: var(--Red-500);
+  --color-outline-slider-focus: var(--Red-500);
+  --color-bg-slider-checked-hover: var(--Red-700);
+  --color-round-slider: var(--Neutral-100);
+
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html, body {
+html,
+body {
   min-height: 100%;
 }
 
 html {
   overflow-y: scroll;
-  background: var(--Dark-Gradient);
+  background: var(--color-bg-app);
 }
 
 body {
   font-family: "NotoSans", sans-serif;
   font-size: 16px;
-  color: var(--Neutral-300);
   margin: 0;
   padding: 20px;
   box-sizing: border-box;
 }
-
 
 /*General styles*/
 
 .topbar {
   display: flex;
   justify-content: space-between;
-  background: var(--Neutral-800);
+  background: var(--color-bg-topbar);
   padding: 10px 10px;
   border-radius: 10px;
   margin-bottom: 30px;
 }
 
 .topbar > button {
-  background: var(--Neutral-700);
+  background: var(--color-bg-topbar-btn);
   border: none;
   border-radius: 10px;
   font-size: 8px;
@@ -57,13 +106,13 @@ body {
 }
 
 .topbar > button:focus #themeIcon {
-  outline: solid 2px var(--Red-500);
+  outline: solid 2px var(--color-outline-topbar-btn);
   outline-offset: 2px;
-  background: var(--Neutral-600);
+  background: var(--color-bg-topbar-btn-hover);
 }
 
 .topbar > button > #themeIcon:hover {
-  background: var(--Neutral-600);
+  background: var(--color-bg-topbar-btn-hover);
   cursor: pointer;
 }
 
@@ -78,6 +127,7 @@ body {
 
 .topbarStates > h1 {
   font-size: 25px;
+  color: var(--color-text-title);
 }
 
 .topbarStates > .states {
@@ -88,39 +138,38 @@ body {
 }
 
 .topbarStates > .states > button {
-  background: var(--Neutral-700);
-  color: var(--Neutral-100);
+  background: var(--color-bg-btn);
+  color: var(--color-text-btn);
   font-size: 15px;
   border-radius: 20px;
   padding: 7px 15px;
-  border: 1px solid var(--Neutral-600);
+  border: 1px solid var(--color-border-btn);
 }
 
 .topbarStates > .states > button.active {
-  background: var(--Red-500);
-  color: var(--Neutral-800);
+  background: var(--color-bg-btn-active);
+  color: var(--color-text-btn-active);
   border: 1px solid transparent;
+}
+
+.topbarStates > .states > button.active:hover {
+  background: var(--color-bg-btn-active-hover);
 }
 
 .topbarStates > .states > button:hover {
-  background: var(--Neutral-600);
-  color: var(--Neutral-0);
+  background: var(--color-bg-btn-hover);
   cursor: pointer;
 }
-.topbarStates > .states > button:focus && button:not(.active) {
-  background: var(--Neutral-600);
-  color: var(--Neutral-0);
-  outline: 2px solid var(--Red-500);
+
+.topbarStates > .states > button:focus {
+  outline: 2px solid var(--color-outline-btn-focus);
   outline-offset: 2px;
 }
 
-.topbarStates > .states > button:active,
-.topbarStates > .states > button.selected {
-  background: var(--Red-500);
-  color: var(--Neutral-800);
-  border: 1px solid transparent;
-  outline: none;
+.topbarStates > .states > button:focus:not(.active) {
+  background: var(--color-bg-btn-focus-not-active);
 }
+
 
 #extensionsList {
   display: grid;
@@ -129,8 +178,8 @@ body {
 }
 
 #extensionsList > .card {
-  background: var(--Neutral-800);
-  border: solid 1px var(--Neutral-600);
+  background: var(--color-bg-card);
+  border: solid 1px var(--color-border-card);
   border-radius: 10px;
   padding: 20px;
   display: flex;
@@ -155,11 +204,11 @@ body {
 #extensionsList > .card > .card-header > .card-header-text > h2 {
   font-size: 20px;
   font-weight: 600;
-  color: var(--Neutral-100);
+  color: var(--color-text-card-title);
 }
 
 #extensionsList > .card > .card-header > .card-header-text > p {
-color: var(--Neutral-300);
+  color: var(--color-text-card-desc);
 }
 
 #extensionsList > .card > .card-footer {
@@ -168,26 +217,26 @@ color: var(--Neutral-300);
   align-items: center;
 }
 #extensionsList > .card > .card-footer > button {
-  background: var(--Neutral-800);
+  background: var(--color-bg-card-btn);
   border-radius: 20px;
   font-weight: 600;
   font-size: 14px;
   padding: 7px 15px;
-  border: solid 1px var(--Neutral-600);
-  color: var(--Neutral-300);
+  border: solid 1px var(--color-border-card-btn);
+  color: var(--color-text-card-btn);
   cursor: pointer;
 }
 
 #extensionsList > .card > .card-footer > button:hover {
-  background: var(--Red-700);
-  color: var(--Neutral-700);
+  background: var(--color-bg-card-btn-hover);
+  color: var(--color-text-card-btn-hover);
   border: 1px solid transparent;
 }
 
 #extensionsList > .card > .card-footer > button:focus {
-  background: var(--Neutral-600);
-  color: var(--Neutral-0);
-  outline: 2px solid var(--Red-500);
+  background: var( --color-bg-card-btn-focus);
+  color: var(--color-text-card-btn-focus);
+  outline: 2px solid var(--color-outline-card-btn-focus);
   outline-offset: 2px;
 }
 
@@ -209,7 +258,7 @@ color: var(--Neutral-300);
 .slider {
   position: absolute;
   cursor: pointer;
-  background-color: var(--Neutral-600);
+  background-color: var(--color-bg-slider-no-checked);
   border-radius: 34px;
   top: 0;
   left: 0;
@@ -225,29 +274,27 @@ color: var(--Neutral-300);
   width: 22px;
   left: 3px;
   bottom: 3px;
-  background-color: white;
+  background-color: var(--color-round-slider);
   border-radius: 50%;
   transition: 0.4s;
 }
 
 input:checked + .slider {
-  background-color: var(--Red-500);
+  background-color: var(--color-bg-slider-checked);
 }
 
 input:checked + .slider:hover {
-  background-color: var(--Red-700);
+  background-color: var(--color-bg-slider-checked-hover);
 }
 
-.switch > input:focus + .slider{
-  outline: 2px solid var(--Red-500);
+.switch > input:focus + .slider {
+  outline: 2px solid var(--color-outline-slider-focus);
   outline-offset: 2px;
   transition: none;
 }
 
-
 input:checked + .slider::before {
   transform: translateX(22px);
 }
-
 
 /*End switch styles*/

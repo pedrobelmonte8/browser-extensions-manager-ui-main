@@ -1,7 +1,7 @@
 import { cardComponent } from "../components/cardComponent.js";
 import {filterItems} from "../scripts/filterController.js";
 
-const app = document.getElementById("extensionsList");
+const extensionsList = document.getElementById("extensionsList");
 const topbarStatesButtons = document.querySelectorAll(".states > button");
 const buttonTheme = document.getElementById("#themeIcon");
 
@@ -27,7 +27,7 @@ fetch("./data.json")
   .then((data) => {
     data.forEach((item) => {
       const card = cardComponent(item);
-      app.appendChild(card);
+      extensionsList.appendChild(card);
     });
     filterItems(localStorage.getItem("state"));
 
