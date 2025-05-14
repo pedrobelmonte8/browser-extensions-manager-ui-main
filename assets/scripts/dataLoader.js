@@ -38,7 +38,9 @@ fetch("./data.json")
 
 
 if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.remove("light-theme");
   document.body.classList.add("dark-theme");
 } else {
   document.body.classList.remove("dark-theme");
+  document.body.classList.add("light-theme");
 }

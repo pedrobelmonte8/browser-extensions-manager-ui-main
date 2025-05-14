@@ -2,12 +2,23 @@
 @import "./fonts.css";
 
 :root {
+
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body.dark-theme{
   /* Colores para la app */
   --color-bg-app: var(--Dark-Gradient);
 
   /* Colores para el topbar */
   --color-bg-topbar: var(--Neutral-800);
-  
+
   --color-bg-topbar-btn: var(--Neutral-700);
   --color-bg-topbar-btn-hover: var(--Neutral-600);
   --color-outline-topbar-btn: var(--Red-500);
@@ -48,14 +59,57 @@
   --color-outline-slider-focus: var(--Red-500);
   --color-bg-slider-checked-hover: var(--Red-700);
   --color-round-slider: var(--Neutral-100);
-
+  
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+body.light-theme{
+  /* Colores para la app */
+  --color-bg-app: var(--Light-Gradient);
+
+  /* Colores para el topbar */
+  --color-bg-topbar: var(--Neutral-0);
+
+  --color-bg-topbar-btn: var(--Neutral-100);
+  --color-bg-topbar-btn-hover: var(--Neutral-300);
+  --color-outline-topbar-btn: var(--Red-500);
+
+  /* Colores para la barra de estados */
+  --color-text-title: var(--Neutral-900);
+
+  --color-bg-btn: var(--Neutral-0);
+  --color-text-btn: var(--Neutral-700);
+  --color-bg-btn-active: var(--Red-500);
+  --color-text-btn-active: var(--Neutral-0);
+  --color-bg-btn-active-hover: var(--Red-700);
+  --color-border-btn: var(--Neutral-300);
+  --color-bg-btn-hover: var(--Neutral-100);
+  --color-outline-btn-focus: var(--Red-500);
+  --color-bg-btn-focus-not-active: var(--Neutral-100);
+
+  /*Colores para los cards  */
+  --color-bg-card: var(--Neutral-0);
+  --color-border-card: var(--Neutral-200);
+
+  --color-text-card-title: var(--Neutral-900);
+  --color-text-card-desc: var(--Neutral-600);
+
+  --color-bg-card-btn: var(--Neutral-0);
+  --color-text-card-btn: var(--Neutral-700);
+  --color-border-card-btn:var(--Neutral-300);
+  --color-bg-card-btn-hover: var(--Red-500);
+  --color-text-card-btn-hover: var(--Neutral-0);
+  --color-bg-card-btn-focus: var(--Neutral-100);
+  --color-text-card-btn-focus: var(--Neutral-800);
+  --color-outline-card-btn-focus: var(--Red-500);
+
+    /* Colores para el slider */
+  --color-bg-slider-no-checked: var(--Neutral-300);
+  --color-bg-slider-checked: var(--Red-500);
+  --color-outline-slider-focus: var(--Red-500);
+  --color-bg-slider-checked-hover: var(--Red-700);
+  --color-round-slider: var(--Neutral-0);
 }
+
 
 html,
 body {
@@ -64,7 +118,7 @@ body {
 
 html {
   overflow-y: scroll;
-  background: var(--color-bg-app);
+
 }
 
 body {
@@ -73,6 +127,7 @@ body {
   margin: 0;
   padding: 20px;
   box-sizing: border-box;
+  background: var(--color-bg-app);
 }
 
 /*General styles*/
