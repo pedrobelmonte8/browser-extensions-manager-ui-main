@@ -3,7 +3,7 @@ import {filterItems} from "../scripts/filterController.js";
 
 const extensionsList = document.getElementById("extensionsList");
 const topbarStatesButtons = document.querySelectorAll(".states > button");
-const buttonTheme = document.getElementById("#themeIcon");
+const buttonTheme = document.getElementById("themeIcon");
 
 if (localStorage.getItem("state") === null) {
   localStorage.setItem("state", "all");
@@ -40,7 +40,9 @@ fetch("./data.json")
 if (localStorage.getItem("theme") === "dark") {
   document.body.classList.remove("light-theme");
   document.body.classList.add("dark-theme");
+  buttonTheme.src = "./assets/images/icon-sun.svg";
 } else {
   document.body.classList.remove("dark-theme");
   document.body.classList.add("light-theme");
+  buttonTheme.src = "./assets/images/icon-moon.svg";
 }
