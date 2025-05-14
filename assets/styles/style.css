@@ -1,15 +1,13 @@
 @import "./colors.css";
 @import "./fonts.css";
 
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-
-body.dark-theme{
+body.dark-theme {
   /* Colores para la app */
   --color-bg-app: var(--Dark-Gradient);
 
@@ -32,7 +30,6 @@ body.dark-theme{
   --color-bg-btn-hover: var(--Neutral-600);
   --color-outline-btn-focus: var(--Red-500);
   --color-bg-btn-focus-not-active: var(--Neutral-600);
-  
 
   /*Colores para los cards  */
   --color-bg-card: var(--Neutral-800);
@@ -43,7 +40,7 @@ body.dark-theme{
 
   --color-bg-card-btn: var(--Neutral-800);
   --color-text-card-btn: var(--Neutral-300);
-  --color-border-card-btn:var(--Neutral-600);
+  --color-border-card-btn: var(--Neutral-600);
   --color-bg-card-btn-hover: var(--Red-700);
   --color-text-card-btn-hover: var(--Neutral-800);
   --color-bg-card-btn-focus: var(--Neutral-600);
@@ -56,10 +53,9 @@ body.dark-theme{
   --color-outline-slider-focus: var(--Red-500);
   --color-bg-slider-checked-hover: var(--Red-700);
   --color-round-slider: var(--Neutral-100);
-  
 }
 
-body.light-theme{
+body.light-theme {
   /* Colores para la app */
   --color-bg-app: var(--Light-Gradient);
 
@@ -92,21 +88,20 @@ body.light-theme{
 
   --color-bg-card-btn: var(--Neutral-0);
   --color-text-card-btn: var(--Neutral-700);
-  --color-border-card-btn:var(--Neutral-300);
+  --color-border-card-btn: var(--Neutral-300);
   --color-bg-card-btn-hover: var(--Red-500);
   --color-text-card-btn-hover: var(--Neutral-0);
   --color-bg-card-btn-focus: var(--Neutral-100);
   --color-text-card-btn-focus: var(--Neutral-800);
   --color-outline-card-btn-focus: var(--Red-500);
 
-    /* Colores para el slider */
+  /* Colores para el slider */
   --color-bg-slider-no-checked: var(--Neutral-300);
   --color-bg-slider-checked: var(--Red-500);
   --color-outline-slider-focus: var(--Red-500);
   --color-bg-slider-checked-hover: var(--Red-700);
   --color-round-slider: var(--Neutral-0);
 }
-
 
 html,
 body {
@@ -115,7 +110,6 @@ body {
 
 html {
   overflow-y: scroll;
-
 }
 
 body {
@@ -177,6 +171,15 @@ body {
   margin-bottom: 20px;
 }
 
+@media (max-width: 480px) {
+  /* Solo móviles */
+  .topbarStates {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
 .topbarStates > h1 {
   font-size: 25px;
   color: var(--color-text-title);
@@ -221,7 +224,6 @@ body {
 .topbarStates > .states > button:focus:not(.active) {
   background: var(--color-bg-btn-focus-not-active);
 }
-
 
 #extensionsList {
   display: grid;
@@ -286,7 +288,7 @@ body {
 }
 
 #extensionsList > .card > .card-footer > button:focus {
-  background: var( --color-bg-card-btn-focus);
+  background: var(--color-bg-card-btn-focus);
   color: var(--color-text-card-btn-focus);
   outline: 2px solid var(--color-outline-card-btn-focus);
   outline-offset: 2px;
